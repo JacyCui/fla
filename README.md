@@ -1,10 +1,10 @@
-# 数据结构
+# 形式语言与自动机
 
-教程网址：https://ds.cuijiacai.com/
+教程网址：https://fla.cuijiacai.com/
 
 ## 前置要求
 
-需要基本的编程基础。
+需要基本的离散数学基础。
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
 
