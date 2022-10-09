@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="274"
+   height="155"
+   id="svg2"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Automata-Graph.Mon Feb 12 2018 22_09_03 GMT+0330 (+0330).svg">
+  <metadata
+     id="metadata42">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="715"
+     id="namedview40"
+     showgrid="false"
+     inkscape:zoom="2.1948263"
+     inkscape:cx="163.85793"
+     inkscape:cy="83.48328"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4" />
+  <path
+     style="fill:#ffffff;stroke:#0000ff;stroke-miterlimit:10;stroke-opacity:0.5;stroke-dasharray:none"
+     inkscape:connector-curvature="0"
+     id="path12"
+     stroke-miterlimit="10"
+     d="m 98.849742,85.68912 a 30,30 0 1 1 -1e-5,-0.03"
+     paint-order="fill stroke markers" />
+  <path
+     style="fill:none;stroke:#0000ff;stroke-miterlimit:10;stroke-opacity:0.5;stroke-dasharray:none"
+     inkscape:connector-curvature="0"
+     id="path14"
+     stroke-miterlimit="10"
+     d="m 94.564035,85.68912 a 25.714286,25.714286 0 1 1 -2e-5,-0.0257"
+     paint-order="fill stroke markers" />
+  <path
+     style="fill:none;stroke:#0000ff;stroke-miterlimit:10;stroke-opacity:0.5;stroke-dasharray:none"
+     inkscape:connector-curvature="0"
+     id="path16"
+     stroke-miterlimit="10"
+     d="m 8.8497446,85.68912 30.0000004,0 -10,-8 m 10,8 -10,8"
+     paint-order="fill stroke markers" />
+  <text
+     style="font-size:25px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;stroke:none;font-family:tahoma"
+     id="text18"
+     dominant-baseline="alphabetic"
+     y="92.689148"
+     x="68.849747"
+     text-decoration="normal"
+     font-weight="normal"
+     font-style="normal"
+     font-size="25px">S₁</text>
+  <path
+     style="fill:none;stroke:#0000ff;stroke-miterlimit:10;stroke-opacity:0.5;stroke-dasharray:none"
+     inkscape:connector-curvature="0"
+     id="path20"
+     stroke-miterlimit="10"
+     d="m 66.757055,55.7622 c -3.13905,-44.89038 -50.00669,-24.02357 -18.74706,8.34673 m 0,0 -0.69757,-9.97564 m 0.69757,9.97564 -9.36394,-3.50951"
+     paint-order="fill stroke markers" />
+  <text
+     style="font-size:20px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;stroke:none;font-family:Tahoma"
+     id="text22"
+     dominant-baseline="alphabetic"
+     y="27.305206"
+     x="40.184185"
+     text-decoration="normal"
+     font-weight="normal"
+     font-style="normal"
+     font-size="20px">1</text>
+  <path
+     style="fill:none;stroke:#0000ff;stroke-miterlimit:10;stroke-opacity:0.5;stroke-dasharray:none"
+     inkscape:connector-curvature="0"
+     id="path24"
+     stroke-miterlimit="10"
+     d="m 89.592695,107.36238 q 35.243795,36.82447 71.133775,0.6295 m 0,0 -2.5473,9.67012 m 2.5473,-9.67012 -9.64822,2.62904"
+     paint-order="fill stroke markers" />
+  <text
+     style="font-size:20px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;stroke:none;font-family:Tahoma"
+     id="text26"
+     dominant-baseline="alphabetic"
+     y="143.93713"
+     x="124.90065"
+     text-decoration="normal"
+     font-weight="normal"
+     font-style="normal"
+     font-size="20px">0</text>
+  <path
+     style="fill:#ffffff;stroke:#0000ff;stroke-miterlimit:10;stroke-opacity:0.5;stroke-dasharray:none"
+     inkscape:connector-curvature="0"
+     id="path28"
+     stroke-miterlimit="10"
+     d="m 211.84974,86.68912 a 30,30 0 1 1 -1e-5,-0.03"
+     paint-order="fill stroke markers" />
+  <text
+     style="font-size:25px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;stroke:none;font-family:tahoma"
+     id="text30"
+     dominant-baseline="alphabetic"
+     y="93.689148"
+     x="181.84975"
+     text-decoration="normal"
+     font-weight="normal"
+     font-style="normal"
+     font-size="25px">S₂</text>
+  <path
+     style="fill:none;stroke:#0000ff;stroke-miterlimit:10;stroke-opacity:0.5;stroke-dasharray:none"
+     inkscape:connector-curvature="0"
+     id="path32"
+     stroke-miterlimit="10"
+     d="m 210.04052,96.94972 c 50.7434,18.46909 50.7434,-38.99029 0,-20.5212 m 0,0 9.39692,3.4202 m -9.39692,-3.4202 7.01475,-7.12695"
+     paint-order="fill stroke markers" />
+  <text
+     style="font-size:20px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;stroke:none;font-family:Tahoma"
+     id="text34"
+     dominant-baseline="alphabetic"
+     y="86.689148"
+     x="254.78394"
+     text-decoration="normal"
+     font-weight="normal"
+     font-style="normal"
+     font-size="20px">1</text>
+  <path
+     style="fill:none;stroke:#0000ff;stroke-miterlimit:10;stroke-opacity:0.5;stroke-dasharray:none"
+     inkscape:connector-curvature="0"
+     id="path36"
+     stroke-miterlimit="10"
+     d="m 161.10679,65.01586 q -35.2438,-36.82447 -71.133775,-0.6295 m 0,0 2.5473,-9.67012 m -2.5473,9.67012 9.648217,-2.62904"
+     paint-order="fill stroke markers" />
+  <text
+     style="font-size:20px;font-style:normal;font-weight:normal;text-anchor:middle;fill:#000000;stroke:none;font-family:Tahoma"
+     id="text38"
+     dominant-baseline="alphabetic"
+     y="42.441101"
+     x="125.79884"
+     text-decoration="normal"
+     font-weight="normal"
+     font-style="normal"
+     font-size="20px">0</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1800" viewBox="0 0 1800 1800">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 91.667px;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke: #697bd1;
+      }
+
+      .cls-2 {
+        fill: #697bd1;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #2d3b93;
+        stroke-width: 83.333px;
+      }
+
+      .cls-4 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="896.55" cy="895.549" r="449.831"/>
+  <circle class="cls-2" cx="1291.5" cy="615.5" r="199.5"/>
+  <circle id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-3" cx="751.375" cy="446.156" r="169.25"/>
+  <path id="Ellipse_1_copy_2" data-name="Ellipse 1 copy 2" class="cls-4" d="M767.378,1175.68c93.471,0,169.244,75.73,169.244,169.16S860.849,1514,767.378,1514s-169.244-75.74-169.244-169.16S673.907,1175.68,767.378,1175.68Z"/>
+  <path id="Ellipse_1_copy_3" data-name="Ellipse 1 copy 3" class="cls-4" d="M413.244,730.839c93.47,0,169.243,75.736,169.243,169.161s-75.773,169.16-169.243,169.16S244,993.425,244,900,319.773,730.839,413.244,730.839Z"/>
+  <ellipse id="Ellipse_1_copy_4" data-name="Ellipse 1 copy 4" class="cls-3" cx="1291.5" cy="1176" rx="169.5" ry="169"/>
+</svg>
