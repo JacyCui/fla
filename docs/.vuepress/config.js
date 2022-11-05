@@ -89,8 +89,9 @@ module.exports = {
                     {text: '1 前置知识', link: '/01-preliminary/'},
                     {text: '2 有穷自动机', link: '/02-fa/'},
                     {text: '3 正则表达式', link: '/03-re/'},
-                    {text: '4 上下文无关语言', link: '/04-cfl/'},
-                    {text: '5 下推自动机', link: '/05-pda/'}
+                    {text: '4 上下文无关文法', link: '/04-cfg/'},
+                    {text: '5 下推自动机', link: '/05-pda/'},
+                    {text: '6 上下文无关语言', link: '/06-cfl/'}
                 ]
             },
             { text: '笔者博客', link: 'https://blog.cuijiacai.com' },
@@ -107,8 +108,9 @@ module.exports = {
             '/01-preliminary/',
             '/02-fa/',
             '/03-re/',
-            '/04-cfl/',
-            '/05-pda/'
+            '/04-cfg/',
+            '/05-pda/',
+            '/06-cfl/'
         ],
 
         // 关于页脚

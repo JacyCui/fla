@@ -49,7 +49,7 @@ PDA是非确定性的，也就是说它的下一个移动可以有不止一个�
 
         - 一个栈符号 $Z \in \Gamma$ ；
     
-    - $\delta(q, a, Z) = \{(p, \alpha) | p \in Q, \alpha \in \Gamma^+\}$ ，可能是空集；
+    - $\delta(q, a, Z) = \{(p, \alpha) | p \in Q, \alpha \in \Gamma^*\}$ ，可能是空集；
 
     - 如果 $(p, \alpha) \in \delta(q, a, Z)$ ，那么PDA可以在状态 $q$ ，接收输入 $a$ ，并且观察到栈顶元素为 $Z$ 的时候：
 
