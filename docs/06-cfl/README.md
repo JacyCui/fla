@@ -208,7 +208,7 @@ $$
 令DFA $A$ 的转移函数为 $\delta_A$ ，PDA $P$ 的转移方程为 $\delta_P$ 。组合起来的PDA的状态形如 $[q, p]$ ，其中 $q$ 是一个 $A$ 的状态， $p$ 是一个 $P$ 的状态。
 
 $$
-([\delta_A(q, a), r], \alpha) \in \delta_P([q, p], a, X) \Leftrightarrow (r, \alpha) \in \delta_P(p, \alpha, X)
+([\delta_A(q, a), r], \alpha) \in \delta([q, p], a, X) \Leftrightarrow (r, \alpha) \in \delta_P(p, a, X)
 $$
 
 其实和之前的乘积自动机类似，只不过增加了一个栈而已。需要注意的是这里 $a$ 可以是 $\varepsilon$ ，在这种情况下 $\delta_A(q, a) = q$ 。
