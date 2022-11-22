@@ -91,7 +91,8 @@ module.exports = {
                     {text: '3 正则表达式', link: '/03-re/'},
                     {text: '4 上下文无关文法', link: '/04-cfg/'},
                     {text: '5 下推自动机', link: '/05-pda/'},
-                    {text: '6 上下文无关语言', link: '/06-cfl/'}
+                    {text: '6 上下文无关语言', link: '/06-cfl/'},
+                    {text: '7 图灵机', link: '/07-tm/'}
                 ]
             },
             { text: '笔者博客', link: 'https://blog.cuijiacai.com' },
@@ -110,7 +111,8 @@ module.exports = {
             '/03-re/',
             '/04-cfg/',
             '/05-pda/',
-            '/06-cfl/'
+            '/06-cfl/',
+            '/07-tm/'
         ],
 
         // 关于页脚
