@@ -92,7 +92,8 @@ module.exports = {
                     {text: '4 上下文无关文法', link: '/04-cfg/'},
                     {text: '5 下推自动机', link: '/05-pda/'},
                     {text: '6 上下文无关语言', link: '/06-cfl/'},
-                    {text: '7 图灵机', link: '/07-tm/'}
+                    {text: '7 图灵机', link: '/07-tm/'},
+                    {text: '8 判定性与复杂度', link: '/08-pnp/'}
                 ]
             },
             { text: '笔者博客', link: 'https://blog.cuijiacai.com' },
@@ -112,7 +113,8 @@ module.exports = {
             '/04-cfg/',
             '/05-pda/',
             '/06-cfl/',
-            '/07-tm/'
+            '/07-tm/',
+            '/08-pnp/'
         ],
 
         // 关于页脚
