@@ -94,7 +94,9 @@ module.exports = {
                     {text: '6 上下文无关语言', link: '/06-cfl/'},
                     {text: '7 图灵机', link: '/07-tm/'},
                     {text: '8 判定性与复杂度', link: '/08-pnp/'},
-                    {text: '9 迁移系统', link: '/09-ts/'}
+                    {text: '9 迁移系统', link: '/09-ts/'},
+                    {text: '10 Petri网', link: '/10-pn/'},
+                    {text: '11 时间自动机', link: '/11-ta/'}
                 ]
             },
             { text: '笔者博客', link: 'https://blog.cuijiacai.com' },
@@ -116,7 +118,9 @@ module.exports = {
             '/06-cfl/',
             '/07-tm/',
             '/08-pnp/',
-            '/09-ts/'
+            '/09-ts/',
+            '/10-pn/',
+            '/11-ta/'
         ],
 
         // 关于页脚
