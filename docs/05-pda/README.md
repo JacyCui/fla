@@ -257,7 +257,7 @@ $L(P)$ 与 $N(P)$ 在定义语言的能力上是等价的。
 
 3. $\delta(s, \varepsilon, X_0) = \{(q_0, Z_0X_0)\}$ ，用于启动 $P$ ；
 
-4. 对于 $P$ 中的任意状态 $q$ ， $\delta(q, \varepsilon, X_0) = \{(f, \varepsilon)\} $ 。
+4. 对于 $P$ 中的任意状态 $q$ ， $\delta(q, \varepsilon, X_0) = \{(f, \varepsilon)\}$ 。
 
 再一次强调，这里新增 $X_0$ 的作用，和之前一样，都是为了保护栈底，辅助判断。
 
