@@ -102,7 +102,7 @@ module.exports = {
             { 
                 text: '优化打印版PDF',
                 items: [
-                    { text: '有穷自动机与正则语言.pdf', href: 'https://fla.cuijiacai.com/有穷自动机与正则语言.pdf'},
+                    { text: '有穷自动机与正则语言.pdf', link: 'https://fla.cuijiacai.com/有穷自动机与正则语言.pdf'},
                 ]
             },
             { text: '个人主页', link: 'https://www.cuijiacai.com' },
