@@ -99,7 +99,7 @@ module.exports = {
                     {text: '11 时间自动机', link: '/11-ta/'}
                 ]
             },
-            { text: '笔者博客', link: 'https://blog.cuijiacai.com' },
+            { text: '个人主页', link: 'https://www.cuijiacai.com' },
         ],
         repo: 'JacyCui/fla', // 文档项目的github仓库
 
