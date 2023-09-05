@@ -7,10 +7,10 @@ actionText: 开始学习 → # 主页按钮文字
 actionLink: /preface/ # 主页按钮链接
 # navbar: true # 启用导航栏
 features: # 特点介绍
-- title: 内容全面
-  details: 包含完整的形式语言与自动机的内容。
-- title: 通俗易懂
-  details: 笔者会以一个学习者的视角来书写教程，从问题引入，避免将教程写成一本字典。
+- title: 网页版内容全面
+  details: 网页版中包含完整的南京大学形式语言与自动机课程的同步课堂笔记
+- title: 打印版通俗易懂
+  details: 网页版是打印版的草稿，打印版中，笔者会以一个学习者的视角来书写教程，从问题引入，避免将教程写成一本字典。
 # footer: MIT Licensed | Copyright © 2018-present Evan You # 页脚
 ---
 
