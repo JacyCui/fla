@@ -9,8 +9,6 @@ actionLink: /preface/ # 主页按钮链接
 features: # 特点介绍
 - title: 内容全面
   details: 包含完整的形式语言与自动机的内容。
-- title: 讲练结合
-  details: 配有相应的习题与解答。
 - title: 通俗易懂
   details: 笔者会以一个学习者的视角来书写教程，从问题引入，避免将教程写成一本字典。
 # footer: MIT Licensed | Copyright © 2018-present Evan You # 页脚
