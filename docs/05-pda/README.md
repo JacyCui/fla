@@ -329,6 +329,23 @@ CFG和PDA在定义语言的表达能力上是能加的。
 
 ### 5.2.2 CFG转化成PDA
 
+首先，我们说明其思路：
+
+CFG $G$ 是一系列的规则，其目的是为了生成对应的正则语言。因此，假定我们想转化其为对应的PDA，我们可以借助PDA的Non-determinism“模拟”生成规则允许生成的字符串，然后判断是否有一种情况和真的input相对应，如果一样即Accepted输入。
+
+我们在栈中存放一些元素，这些元素如果等于input，即Accept，伪算法可以这么理解：
+
+```
+Func Gen_string(input,check,PDA) #借助某个PDA证明input可以通过CFG变成check
+	[Stack1, Stack2, ...]= PDA(input with empty stack)
+	#解释：我们将input和空栈作为初始条件给PDA，那么PDA将因为Non-deter进入许多Accepted的状态，进入这些状态时可能栈不为空，我们取这些状态的Stack作为返回值，返回一个列表
+	if check == stack_i #这里定义为从栈顶到栈底的符号们恰好等于check字符串
+		return True
+	return False
+```
+
+随后我们正式的进行证明：
+
 对于CFG $G$ ，令 $L = L(G)$ ，构造PDA $P$ 使得 $N(P) = L$ 。
 
 其中，$P$ 有：
@@ -374,7 +391,7 @@ $$
 有两种情况需要考虑，取决于最后一次移动是用的第一条规则还是第二条规则。
 
 - 如果使用第一条规则，则移动序列一定形如 $(q, yax, S) \vdash^* (q, ax, a\alpha) \vdash (q, x, \alpha)$ ，其中 $ya = w$ 。
-    
+  
     - 根据归纳假设，对于前 $n - 1$ 步，有 $S \Rightarrow^*_{lm} ya\alpha$ ，而 $ya = w$ ，则 $S \Rightarrow^*_{lm}w\alpha$ 。
 
 - 如果使用第二条规则，则移动序列一定形如 $(q, wx, S) \vdash^* (q, x, A\beta) \vdash (q, x, \gamma\beta)$ ，其中 $A \to \gamma$ 是一个产生式，且 $\gamma\beta = \alpha$ 。
