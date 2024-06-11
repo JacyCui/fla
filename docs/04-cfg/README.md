@@ -24,7 +24,7 @@
 ### 4.1.2 形式化定义
 
 ::: definition 定义4.1
-定义 **上下文无关文法(Context-Free Grammer, CFG)** 为一个三元组 $G = (V, T, P, S)$ ，其中：
+定义 **上下文无关文法(Context-Free Grammer, CFG)** 为一个四元组 $G = (V, T, P, S)$ ，其中：
 
 - $T$ 是CFG所要定义的语言的字母表，称为 **终结符(Terminals)** ；
 
