@@ -347,7 +347,7 @@ $\hat\delta$ 简记为 $\delta$ 。
 称一个字符串 $w$ 被一个 NFA $A = (Q, \Sigma, \delta, q_0, F)$ **接受** ，如果
 
 $$
-\delta(q_0, w) \cap F \ne \emptyset
+\hat\delta(q_0, w) \cap F \ne \emptyset
 $$
 
 一个NFA的语言就是这个NFA所能接受的所有字符串的集合，记为 $L(A)$ 。
