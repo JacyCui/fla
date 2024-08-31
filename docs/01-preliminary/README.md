@@ -162,7 +162,7 @@ $$
 
     - 称 $g(n)$ 是 $f(n)$ 的一个下界(lower bound)。
 - 如果 $f(n) = O(g(n))$ 且 $f(n) = \Omega(g(n))$ ，记 $f(n) = \Theta(g(n))$ 。
-    - 称 $f(n)$ 与 $g(n)$ 具有相同的增长率(growth rate)，不过它们的取值可能打不相同，因为渐进复杂度表示法比较的是函数的增长率。
+    - 称 $f(n)$ 与 $g(n)$ 具有相同的增长率(growth rate)，不过它们的取值可能大不相同，因为渐进复杂度表示法比较的是函数的增长率。
 - $f(n) = \Omega(g(n)) \Leftrightarrow g(n) = O(f(n))$
 
 ### 1.1.4 关系(relations)
