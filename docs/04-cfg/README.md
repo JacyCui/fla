@@ -24,11 +24,11 @@
 ### 4.1.2 形式化定义
 
 ::: definition 定义4.1
-定义 **上下文无关文法(Context-Free Grammer, CFG)** 为一个三元组 $G = (V, T, P, S)$ ，其中：
+定义 **上下文无关文法(Context-Free Grammer, CFG)** 为一个四元组 $G = (V, T, P, S)$ ，其中：
 
 - $T$ 是CFG所要定义的语言的字母表，称为 **终结符(Terminals)** ；
 
-- $V$ 是一个有限的其他符号的集合，每个符号代表了一个语言，称为 **变量(Variables)** 或者 **非终止符(Nonterminals)** ；
+- $V$ 是一个有限的其他符号的集合，每个符号代表了一个语言，称为 **变量(Variables)** 或者 **非终结符(Nonterminals)** ；
 
 - $S$ 是代表CFG所要定义的语言变量，称为 **起始符号(Start Symbol)** ；
 
@@ -46,7 +46,7 @@
 
 - 用 $a, b, c, ...$ 来表示终结符；
 
-- 用 $..., X, Y, Z$ 来表示终结符或者变量；
+- 用 $..., X, Y, Z$ 来表示非终结符或者变量；
 
 - 用 $..., w, x, y, z$ 来表示仅仅只含有终结符的字符串；
 
@@ -78,7 +78,7 @@ S \Rightarrow 0S1 \Rightarrow 00S11 \Rightarrow 000111
 $$
 
 $$
-S \Rightarrow^* S, S \Rightarrow^* 0S1, S \Rightarrow^* 00S001, S \Rightarrow^* 000111
+S \Rightarrow^* S, S \Rightarrow^* 0S1, S \Rightarrow^* 00S11, S \Rightarrow^* 000111
 $$
 
 ::: definition 定义4.3
@@ -150,7 +150,7 @@ $$
 推导允许我们去替换字符串中的任何变量，因此，对于同一个字符串可能有许多不同的推导。通过强制要求每次都替换最左边的变量（或者每次都替换最右边的量），我们可以避免这种不确定性。
 
 ::: definition 定义4.5
-定义 **最左推导(leftmost derivations)** ：我们称 $wA\alpha \Rightarrow_{lm} w\beta\alpha$ ，如果 $w$ 是由终结符构成的字符串，且 $A \to \beta$ 是一个推导式。
+定义 **最左推导(leftmost derivations)** ：我们称 $wA\alpha \Rightarrow_{lm} w\beta\alpha$ ，如果 $w$ 是由终结符构成的字符串，且 $A \to \beta$ 是一个产生式。
 
 称 $\alpha \Rightarrow^*_{lm} \beta$ ，如果 $\alpha$ 可以通过0步或者若干步最左推导 $\Rightarrow_{lm}$ 变成 $\beta$ 。
 :::
@@ -166,7 +166,7 @@ $$
 其实，$S \Rightarrow SS \Rightarrow S() \Rightarrow (S)() \Rightarrow (())()$ 也是一个推导，但并不是最左推导。
 
 ::: definition 定义4.6
-定义 **最右推导(rightmost derivations)** ：我们称 $\alpha Aw \Rightarrow_{rm} \alpha\beta w$ ，如果 $w$ 是由终结符构成的字符串，且 $A \to \beta$ 是一个推导式。
+定义 **最右推导(rightmost derivations)** ：我们称 $\alpha Aw \Rightarrow_{rm} \alpha\beta w$ ，如果 $w$ 是由终结符构成的字符串，且 $A \to \beta$ 是一个产生式。
 
 称 $\alpha \Rightarrow^*_{rm} \beta$ ，如果 $\alpha$ 可以通过0步或者若干步最右推导 $\Rightarrow_{rm}$ 变成 $\beta$ 。
 :::
@@ -192,7 +192,7 @@ $$
 
 - 中间结点：用变量标记；
 
-    - 子结点用父结点的推导式体中的符号标记；
+    - 子结点用父结点的产生式体中的符号标记；
 
 - 跟结点：用起始符号标记。
 :::
