@@ -1,0 +1,53 @@
+:root {
+  // accent colors
+  --vp-c-accent: #4b3eaf;
+  --vp-c-accent-bg: #4b3eaf;
+  --vp-c-accent-hover: #6154c6;
+
+  // layout vars
+  --navbar-height: 3.6rem;
+  --sidebar-width: 20rem;
+  --content-width: 740px;
+  --homepage-width: 960px;
+}
+
+[data-theme="light"] {
+  // text colors
+  --vp-c-text: #2c3e50;
+  --vp-c-text-mute: #4e6e8e;
+
+  // border colors
+  --vp-c-border: #eaecef;
+}
+
+.content {
+  font-size: 35px;
+}
+
+.definition,
+.theorem,
+.lemma,
+.conclusion,
+.observation {
+  margin: 1rem 0;
+  padding: 0.1rem 1.5rem;
+  border-radius: 0.4rem;
+  .title {
+    font-weight: bold;
+  }
+}
+.definition {
+  background-color: #f0f4f8;
+}
+.theorem {
+  background-color: #edfbf2;
+}
+.lemma {
+  background-color: #f4edfb;
+}
+.conclusion {
+  background-color: #f9f2f9;
+}
+.observation {
+  background-color: #f9f6f2;
+}

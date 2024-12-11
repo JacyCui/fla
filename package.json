@@ -1,16 +1,20 @@
 {
-  "devDependencies": {
-    "@maginapp/vuepress-plugin-katex": "^1.0.11",
-    "@vuepress/plugin-back-to-top": "^1.9.7",
-    "vuepress": "^1.9.7",
-    "vuepress-plugin-container": "^2.1.5"
-  },
+  "name": "fla-notes",
+  "type": "module",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "clean": "rm -rf docs/.vuepress/dist"
   },
-  "dependencies": {
-    "vuepress-plugin-mygitalk": "^1.0.5"
+  "devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.18",
+    "@vuepress/plugin-comment": "2.0.0-rc.65",
+    "@vuepress/plugin-markdown-container": "2.0.0-rc.54",
+    "@vuepress/plugin-markdown-math": "2.0.0-rc.65",
+    "@vuepress/plugin-search": "2.0.0-rc.63",
+    "@vuepress/theme-default": "2.0.0-rc.65",
+    "katex": "^0.16.15",
+    "vue": "^3.5.13",
+    "vuepress": "2.0.0-rc.18"
   }
 }
