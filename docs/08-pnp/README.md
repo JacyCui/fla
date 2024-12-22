@@ -406,9 +406,7 @@ $$
 P 中语言的一些例子：
 
 - $\mathrm{PATH} = \{\langle G, s, t \rangle \mid G \text{ is a directed graph that has a directed path from } s \text{ to } t \}$
-
 - $\mathrm{RELPRIME} = \{\langle x, y \rangle \mid x \text{ and } y \text{ are relatively prime} \}$
-
 - $A_\mathrm{CFG} = \{\langle G, w \rangle \mid G \text{ is a CFG that generates string } w\}$
 
 到此为止，我们将 P 说明白了，下面再来谈谈 NP。NP 的 N 是非确定性（Non-Determinstic）的意思，NTM 就是赋予 DTM 在多种可能的下一状态中选择最合适的一个的能力。
@@ -489,7 +487,6 @@ R = \{
 $$
 
 - $p$ 是一个验证 $\langle G, s, t \rangle$ 在 $\mathrm{HAMPATH}$ 中的证据；
-
 - $R$ 是多项式时间可判定的。
 
 HAMPATH 说的是给定一个有向图 $G$ 和起点 $s$，终点 $t$，判断图 $G$ 中是否存在从 $s$ 到 $t$ 的哈密尔顿通路。
@@ -523,21 +520,18 @@ x \mid \exists y, |y| \le |x|^k, \langle x, y \rangle \in R
 $$
 
 - 由于 $L\in NP$，假设 $L$ 可以在 $n^k$ 时间内被 NTM $M$ 判定；
-
 - 定义语言：
-
-$$
-R = \{
-\langle x, y \rangle \mid \text{$y$ is an accepting computation history of $M$ on input $x$}
-\}
-$$
+  $$
+  R = \{
+  \langle x, y \rangle \mid \text{$y$ is an accepting computation history of $M$ on input $x$}
+  \}
+  $$
 
 $R \in P$ 是显然的，我们只需要验证 $y$ 这个转化过程是否成立就可以了。
 
 下面我们只需要检查两件事情，这个转化就能成立了：
 
 - 接受计算历史（accepting computation history）的长度 $\le |x|^k$。
-
 - $M$ 接受 $x$ 当且仅当 $\exists y, |y| \le |x|^k, \langle x, y \rangle \in R$。
 
 这两件事情就留待读者思考了，想一想还是很容易理解的。
@@ -565,13 +559,9 @@ $$
 $N$ 在输入 $\langle G, k \rangle$ 的时候：
 
 1. 非确定性地选择 $G$ 的一个 $k$ 个结点的字图 $c$；
-
    - 由于是非确定性的，如果存在，一定会选到对的那一个。
-
 2. 检查 $G$ 是否包含 $c$ 中任意两点形成的边。
-
    - 这件事情可以在多项式时间内完成。
-
 3. 如果是，则接受；否则拒绝。
 
 另一种证明方式： $CLIQUE$ 可以表达为 $CLIQUE = \{\langle G, k\rangle \mid \exists c, \langle \langle G, k\rangle, c\rangle \in R \}$。
@@ -601,9 +591,7 @@ $$
 给定一个新的问题 $\mathit{NEW}$，我们如果想要说明这个问题不可判定，我们通常会有两种思路：
 
 - 从头证明这个问题是不可判定的；
-
 - 说明如何将一个已知的不可判定的问题 $\mathit{OLD}$ 转化成 $\mathit{NEW}$，使得 $\mathit{NEW}$ 的解决方案也可以用来解决 $\mathit{OLD}$。
-
   - 如果 $\mathit{NEW}$ 可判定的话，那么用 $\mathit{NEW}$ 的解决方案来解决 $\mathit{OLD}$，则 $\mathit{OLD}$ 也就可判定了，和 $\mathit{OLD}$ 不可判定矛盾。
 
 **归约**（reduction）是一种将一个问题转化成另一个问题的方式，使得第二个问题的解决方案也可以用来解决第一个问题。
@@ -798,11 +786,8 @@ $$
 证明：下面给出一个判定 $A$ 的多项式时间的算法：
 
 - 对于输入 $w$，在多项式时间内计算 $f(w)$；
-
 - 运行多项式时间的算法来判断是否 $f(w) \in B$；
-
   - 如果 $f(w) \in B$，则 $w \in A$；
-
   - 如果 $f(w) \notin B$，则 $w \notin A$。
 
 ### 8.4.2 NP 完全理论
@@ -811,7 +796,6 @@ $$
 称一个语言 $B$ 是 **NP 完全的**（NP-Complete），如果它满足以下两个条件：
 
 1. $B \in NP$；
-
 2. $\forall A \in NP, A \le_P B$。
 
 称 $B$ 是 **NP 难的**（NP-hard），如果我们忽略第一个条件。
@@ -820,7 +804,6 @@ $$
 “难”和“完全”的这两个概念可以推广到其他的问题中：
 
 - 语言 $L$ 是 **C-hard**，如果 $C$ 中的每一个问题都可以归约到 $L$。
-
 - 语言 $L$ 是 **C-complete**，如果 $L$ 是 C-hard 且 $L \in C$。
 
 ::: theorem 定理 8.12
@@ -835,9 +818,7 @@ $$
 下面三个命题等价：
 
 1. $P = NP$；
-
 2. 每一个 NP 完全的语言都在 $P$ 中；
-
 3. 某些 NP 完全的语言在 $P$ 中。
 
 :::
@@ -861,11 +842,8 @@ Cook-Levin 定理：SAT 问题是 NP 完全的。
 证明思路：
 
 1. $SAT \in NP$：
-
    - 猜测一种可能的赋值方式，然后在多项式时间内验证这种赋值方式是否满足要求。
-
 2. $\forall A\in NP, A\le_P \mathrm{SAT}$：
-
    - 证明想法：令 $M$ 是一个在 $n^k$ 时间内判定 $A$ 的 NTM。对于任意输入字符串 $w$，构造一个逻辑表达式 $\varphi_{M, w}$，当且仅当 $M$ 接受 $w$ 的时候 $\varphi_{M, w}$ 可满足。
 
 更特殊地，3SAT 问题也是一个 NP 完全问题。
