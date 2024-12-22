@@ -35,10 +35,7 @@ export default defaultTheme({
   ],
   repo: "JacyCui/fla", // 文档项目的github仓库
 
-  // 关于侧边栏
-  // displayAllHeaders: false, // 显示所有页面的标题链接，否则只显示当前页面的
-  // activeHeaderLinks: false, // 活动的标题链接
-  sidebarDepth: 3, //
+  sidebarDepth: 2,
   sidebar: [
     "/preface/",
     "/01-preliminary/",
@@ -60,4 +57,10 @@ export default defaultTheme({
   docsDir: "docs", // 文档目录
   docsBranch: "main", // 文档分支
   editLinkText: "帮助我改善此页面！",
+
+  themePlugins: {
+    prismjs: {
+      themes: { light: "one-light", dark: "one-dark" },
+    },
+  },
 });

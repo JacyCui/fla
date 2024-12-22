@@ -37,17 +37,31 @@
   }
 }
 .definition {
-  background-color: #f0f4f8;
+  background-color: hsl(210, 36%, 80%, 20%);
 }
 .theorem {
-  background-color: #edfbf2;
+  background-color: hsl(141, 64%, 80%, 20%);
 }
 .lemma {
-  background-color: #f4edfb;
+  background-color: hsl(270, 64%, 80%, 20%);
 }
 .conclusion {
-  background-color: #f9f2f9;
+  background-color: hsl(300, 37%, 80%, 20%);
 }
 .observation {
-  background-color: #f9f6f2;
+  background-color: hsl(34, 37%, 80%, 20%);
+}
+
+main {
+  p {
+    line-height: 1.6;
+    margin-block: 0.7em 0.7em;
+  }
+  ul {
+    margin-block: 0.6em 0.6em;
+  }
+  li {
+    line-height: 1.6;
+    margin: 0.3em 0;
+  }
 }
