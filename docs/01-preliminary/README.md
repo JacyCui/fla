@@ -170,7 +170,7 @@ $$
 
 一个关于集合 $A_1, A_2, ..., A_n$ 的 $n$ 元关系 $R$ 是 $A_1\times A_2 \times ... \times A_n$ 的子集。
 
-给定两个集合 $A$ 和 $B$，一个关系 $R$ 是 $A\times B$ 的一个自己，即 $R \subseteq A\times B$。
+给定两个集合 $A$ 和 $B$，一个关系 $R$ 是 $A\times B$ 的一个子集，即 $R \subseteq A\times B$。
 
 $$
 R = \{(x_1, y_1), (x_2, y_2), (x_3, y_3), ...\}
