@@ -329,9 +329,9 @@ $$
   - 用 $\lambda$ 或者 $\varepsilon$ 表示
   - $|\lambda| = 0$
   - $\lambda w = w\lambda = w$
-- 字串 (substring)
-  - $s$ 是 $x$ 的字串，如果存在字符串 $y, z$ 使得 $x = ysz$。
-  - 字串是原字符串的子序列。
+- 子串 (substring)
+  - $s$ 是 $x$ 的子串，如果存在字符串 $y, z$ 使得 $x = ysz$。
+  - 子串是原字符串的子序列。
 - 前缀与后缀
   - 当 $x = sz$ 即 $y = \varepsilon$ 时，称 $s$ 是 $x$ 的一个前缀 (prefix)；
   - 当 $x = ys$ 即 $z = \varepsilon$ 时，称 $s$ 是 $x$ 的一个后缀 (suffix)。
