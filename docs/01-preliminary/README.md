@@ -138,7 +138,7 @@ $$
 
 ### 1.1.2 函数
 
-给定两个集合 $A$ 和 $B$，一个从 $A$ 到 $B$ 的函数讲 $A$ 中的每一个元素 $a$ 关联到 $B$ 中的最多一个元素 $b$，记作 $f: A\to B$，其中，称有对应关系的 $A$ 中元素的集合为定义域 (domain)，$B$ 中元素的集合为值域 (range)。
+给定两个集合 $A$ 和 $B$，一个从 $A$ 到 $B$ 的函数将 $A$ 中的每一个元素 $a$ 关联到 $B$ 中的最多一个元素 $b$，记作 $f: A\to B$，其中，称有对应关系的 $A$ 中元素的集合为定义域 (domain)，$B$ 中元素的集合为值域 (range)。
 
 <p style="text-align:center"><img src="./function.png" alt="function" style="zoom:20%;"/></p>
 
