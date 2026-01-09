@@ -835,7 +835,7 @@ $$
 
 比如说 $\Phi = (\neg x \wedge y) \vee (x \wedge \neg z)$。
 
-::: thorem 定理 8.15
+::: theorem 定理 8.15
 Cook-Levin 定理：SAT 问题是 NP 完全的。
 :::
 
