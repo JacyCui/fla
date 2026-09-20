@@ -292,10 +292,10 @@ $$
 $$
 \begin{aligned}
 S &\to AB \mid CD\\
-A &\to 0A1 \mid 01\\
-B &\to 2B \mid 2\\
-C &\to 0C \mid 0\\
-D &\to 1D2 \mid 12
+A &\to 0A1 \mid \varepsilon\\
+B &\to 2B \mid \varepsilon\\
+C &\to 0C \mid \varepsilon\\
+D &\to 1D2 \mid \varepsilon
 \end{aligned}
 $$
 
