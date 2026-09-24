@@ -57,7 +57,7 @@ $$
 
 如果一个状态 $s$ 是可达的，并且是一个终结状态，那么我们称 $s$ 是一个死锁状态（deadlock state）。
 
-记 $T^+$ 是所有有限路径的集合，$T^{\omega}$ 是所有无限路径的集合。我们可以将原本定义在 $S \times S$ 上的 $\alpha$ 和 $\beta$ 拓展到 $T^+ \times S$ 上。
+记 $T^+$ 是所有有限路径的集合，$T^{\omega}$ 是所有无限路径的集合。我们可以将原本定义在 $T$ 上的 $\alpha$ 和 $\beta$ 拓展到 $T^+ \times S$ 上。
 
 - $\alpha(t_1\cdots t_n) = \alpha(t_1), \beta(t_1\cdots t_n) = \beta(t_n)$
 - 一个有限的路径 $c$ 代表了一个迁移系统从状态 $\alpha(c)$ 到状态 $\beta(c)$ 的一个有限的演化过程。
@@ -256,7 +256,7 @@ $$
 
 ::: definition 定义 9.9
 
-如果 $\mathcal{A}_i, i = 1, 2, \cdots, n$ 这 $n$ 个迁移系统分别带有字母表 $A_i, i = 1, 2, \cdots, n$ 所定义的标签，并且 $I \subseteq A_1 \times A_2 \times \cdots \times A_n$ 是一个**同步约束**（synchronous product），那么 $\mathcal{A}_i, i = 1, 2, \cdots , n$ 再 $I$ 约束下的**同步积**（synchronous product），写作 $\langle \mathcal{A}_1 ,\cdots ,\mathcal{A}_n, I\rangle$，是 $\mathcal{A}_i, i = 1, 2, \cdots, n$ 的自由积，但是只包含满足 $\langle \lambda_1(t_1), \cdots ,\lambda_n(t_n)\rangle \in I$ 的全局迁移 $\langle t_1, \cdots ,t_n\rangle$。
+如果 $\mathcal{A}_i, i = 1, 2, \cdots, n$ 这 $n$ 个迁移系统分别带有字母表 $A_i, i = 1, 2, \cdots, n$ 所定义的标签，并且 $I \subseteq A_1 \times A_2 \times \cdots \times A_n$ 是一个**同步约束**（synchronous constraint），那么 $\mathcal{A}_i, i = 1, 2, \cdots , n$ 在 $I$ 约束下的**同步积**（synchronous product），写作 $\langle \mathcal{A}_1 ,\cdots ,\mathcal{A}_n, I\rangle$，是 $\mathcal{A}_i, i = 1, 2, \cdots, n$ 的自由积，但是只包含满足 $\langle \lambda_1(t_1), \cdots ,\lambda_n(t_n)\rangle \in I$ 的全局迁移 $\langle t_1, \cdots ,t_n\rangle$。
 
 :::
 
@@ -284,7 +284,7 @@ $$
 
 <p style="text-align:center"><img src="./tau.png" alt="tau" style="zoom:20%;"/></p>
 
-除了显示的将所有可能同时发生的迁移列出来作为同步限制以外，我们也可以使用共享标签来表示两个迁移必须同时发生，这样在表达上面会更加简洁。不过这并没有拓展同步积的表达能力就是了，只是换了一种更简便的表达方式而已。
+除了显式地将所有可能同时发生的迁移列出来作为同步限制以外，我们也可以使用共享标签来表示两个迁移必须同时发生，这样在表达上面会更加简洁。不过这并没有拓展同步积的表达能力就是了，只是换了一种更简便的表达方式而已。
 
 比如说下图的左侧是三个具有共享标签的迁移系统，右侧是它们的同步积。
 
@@ -318,7 +318,7 @@ while (true) {
 
 两个并发执行的进程正在尝试在不违反互斥规定的情况下进入一个临界区（critical section）。
 
-一个程序的状态可以通过其中变量的值以及程序计数器（program counters，pc）的值来捕捉。再我们上面的例子中，有
+一个程序的状态可以通过其中变量的值以及程序计数器（program counters，pc）的值来捕捉。在我们上面的例子中，有
 
 - 两个程序计数器：$pc1$ 和 $pc2$，程序计数的域为 $\{out, wait, cs\}$；
 - 三个布尔变量：$turn$，$a$ 和 $b$，布尔域为 $\{True, False\}$。
@@ -376,7 +376,7 @@ $CTL^*$ 逻辑公式由路径量词和时序操作符组成。
 时序操作符有五个：
 
 - $\mathbf{X}$：$\mathbf{X}p$ 表示性质 $p$ 在路径的第二个（next）状态下成立；
-- $\mathbf{F}$：$\mathbf{F}p$ 表示性质 $p$ 会在路径将来的的某个状态下成立；
+- $\mathbf{F}$：$\mathbf{F}p$ 表示性质 $p$ 会在路径将来的某个状态下成立；
 - $\mathbf{G}$：$\mathbf{G}p$ 表示性质 $p$ 会在路径的全部（globally）状态下都成立；
 - $\mathbf{U}$：$p \mathbf{U} q$ 表示 $q$ 成立的状态的前驱状态下 $p$ 一定会成立，也就是说 $p$ 成立，直到（until）$q$ 成立为止。
 - $\mathbf{R}$：$p \mathbf{R} q$ 表示 $q$ 沿着路径一直保持，直到第一个 $p$ 成立的状态（含这个状态）为止，即 $p$ 释放（release）了 $q$，$p$ 不需要一直保持。
@@ -400,6 +400,8 @@ $CTL^*$ 的语意：
 
 - 如果 $f$ 是一个状态公式，$M$ 是一个迁移系统，$s\to f$ 意味着 $f$ 在迁移系统 $M$ 的状态 $s$ 下保持。
 - 如果 $g$ 是一个路径公式，$M$ 是一个迁移系统，$\pi \to g$ 意味着 $g$ 沿着迁移系统 $M$ 的路径 $\pi$ 保持。
+
+需要注意，这里的 $\to$ 表示的是"满足"的关系，和命题逻辑中表示逻辑蕴含的 $\to$（等价于 $\neg p \vee q$）不同。
 
 ### 9.5.2 CTL 和 LTL
 
@@ -436,7 +438,7 @@ CTL 有 10 个基本的操作符：
 - $\mathbf{E}\mathbf{F}.P$：我有可能在未来的某一天喜欢吃巧克力，喜欢至少一天。
 - $\mathbf{A}\mathbf{F}.\mathbf{E}\mathbf{G}.P$：我总是会在未来的某一天，有可能开始喜欢巧克力，并且会一直喜欢下去。
 - $\mathbf{E}\mathbf{G}.\mathbf{A}\mathbf{F}.P$：这是我生命中关键的一天，基于接下来会发生什么（$\mathbf{E}$），有可能在我的余生当中（$\mathbf{G}$），总是会存在某个未来的时刻（$\mathbf{A}\mathbf{F}$），我会喜欢巧克力，不过如果后续发生了什么，我不保证我会一直喜欢下去。
-- $\mathbf{A}(P \mathbf{U} Q)$：从现在开始，直到外面软和为止，我每一天都会喜欢巧克力。一旦外面软和了，我就不保证我会喜欢巧克力了。并且，未来外面一定会暖和的，哪怕只有一天。
+- $\mathbf{A}(P \mathbf{U} Q)$：从现在开始，直到外面暖和为止，我每一天都会喜欢巧克力。一旦外面暖和了，我就不保证我会喜欢巧克力了。并且，未来外面一定会暖和的，哪怕只有一天。
 - $\mathbf{E}((\mathbf{E}\mathbf{X}.P)\mathbf{U}(\mathbf{A}\mathbf{G}.Q))$：有可能：最终会有一天，从那一天开始外面会永远暖和（$\mathbf{A}\mathbf{G}.Q$），并且在那之前，总是存在某种方式让我在第二天喜欢巧克力（$\mathbf{E}\mathbf{X}.P$）。
 
 ### 9.5.3 表达性质
