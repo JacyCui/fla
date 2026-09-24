@@ -39,7 +39,7 @@
 
 - 状态是分布式的，迁移是本地化的；
 - 本地的因果关系取代了全局时间；
-- 子系统之间通过显示的通信进行交互。
+- 子系统之间通过显式的通信进行交互。
 
 和状态机相比，Petri 网中的状态迁移是 **不同步的 (asynchronous)**。迁移的顺序是部分不协调的，由一个偏序关系规定。因此，Petri 网可以用来对并行的分布式系统进行建模。
 
@@ -52,14 +52,14 @@
 
 - 性能评估（performance evaluation）
 - 通信协议（communication protocols）
-- 分布式软件系统（communication protocols）
-- 分布式数据库系统（communication protocols）
-- 并发和并行程序（communication protocols）
-- 工业控制系统（communication protocols）
-- 离散事件系统（communication protocols）
-- 多处理器内存系统（communication protocols）
-- 数据流计算系统（communication protocols）
-- 容错系统（communication protocols）
+- 分布式软件系统（distributed software systems）
+- 分布式数据库系统（distributed database systems）
+- 并发和并行程序（concurrent and parallel programs）
+- 工业控制系统（industrial control systems）
+- 离散事件系统（discrete event systems）
+- 多处理器内存系统（multiprocessor memory systems）
+- 数据流计算系统（dataflow computing systems）
+- 容错系统（fault-tolerant systems）
 - ……
 
 ## 10.2 Petri 网的基本概念
@@ -96,7 +96,7 @@ Petri 网的图形化表示是一个二部图，它有两种结点：
 
 定义一张 Petri 网的 **标记 (marking)** 为向量 $\mu$，$\mu = \langle \mu_1, \mu_2, \cdots, \mu_n \rangle$，其中 $\mu_i$ 表示第 $i$ 个地点上的 **令牌 (token)** 的数量，$n$ 是总地点数。
 
-$\langle \mu_1, \mu_2, \cdots, \mu_n \rangle$ 可以简写为 $mu_1mu_2\cdots\mu_n$
+$\langle \mu_1, \mu_2, \cdots, \mu_n \rangle$ 可以简写为 $\mu_1\mu_2\cdots\mu_n$
 
 :::
 
@@ -199,7 +199,7 @@ $$
 
 <p style="text-align:center"><img src="./fork.png" alt="fork" style="zoom:30%;"/></p>
 
-当来自一个个地方的令牌通过一个转移的点火到达多个地方的时候，分叉发生了。
+当来自一个地方的令牌通过一个转移的点火到达多个地方的时候，分叉发生了。
 
 #### 并发（Concurrency）
 
@@ -225,7 +225,7 @@ $t_1$ 和 $t_2$ 都被赋能了，但是任意一方点火都会导致另一方�
 
 - 源转移（source transition）：没有输入。
 - 槽转移（sink transition）：没有输出。
-- 自环（self-loop）：一个二元组 $(p, t)$，其中 $p$ 即时 $t$ 的一个输入，也是 $t$ 的一个输出。
+- 自环（self-loop）：一个二元组 $(p, t)$，其中 $p$ 既是 $t$ 的一个输入，也是 $t$ 的一个输出。
 - 纯 Petri 网（pure PN）：没有自环。
 - 带权 Petri 网（weighted PN）：弧上有权重
 - 普通 Petri 网（ordinary PN）：所有的弧的权重都是 1
@@ -439,7 +439,7 @@ Petri 网的分析通常是冗长的，特别是对于大的、复杂的网。�
 ### 10.6.2 形式化定义
 
 ::: definition 定义 10.5
-一个时间 Petri 网是一个 6 元祖，$N = (P, T, F, Eft, Lft, \mu_0)$，其中
+一个时间 Petri 网是一个 6 元组，$N = (P, T, F, Eft, Lft, \mu_0)$，其中
 
 - $P = \{p_1, p_2, \cdots, p_n\}$ 是一个地点的有限集；
 - $T = \{t_1, t_2, \cdots, t_n\}$ 是一个转移的有限集（ $P \cap T = \emptyset$ ）
@@ -516,7 +516,7 @@ $N$ 的初始状态为 $s_0 = (\mu_0, c_0)$，其中 $\forall t \in enabled(\mu_
 - 只有一辆火车；
 - $d_m$ 和 $d_M$ 分别是从 $R$ 段起点走到 $I$ 段起点所需的最小和最大时间；
 - $h_m$ 和 $h_M$ 是通过 $I$ 所需的最短和最长时间；
-- 门即可以是打开，也可以是关闭的，还可以正在向上或者向下移动；
+- 门既可以是打开的，也可以是关闭的，还可以正在向上或者向下移动；
 - 门的移动需要 $\gamma$ 时间且不可以打断。
 
 建模如下：

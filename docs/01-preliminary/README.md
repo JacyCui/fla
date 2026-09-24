@@ -12,7 +12,7 @@
 
 一个元素要么属于一个集合，比如 $1 \in A$；要么不属于一个集合，比如 $ship \notin B$。
 
-集合的可以通过花括号里面罗列有限 (finite) 元素的方式来表示：
+集合可以通过花括号里面罗列有限 (finite) 元素的方式来表示：
 
 $$
 C = \{a, b, c, d, e, f, g, h, i, j, k\}
@@ -27,7 +27,7 @@ $$
 集合也可以是无限 (infinite) 的：
 
 $$
-S = {2, 4, 6, ...}
+S = \{2, 4, 6, ...\}
 $$
 
 也可以通过描述法来表示集合：
@@ -70,14 +70,14 @@ $$
 
 - 补集 (complement)
 
-  - 定义全集 $U = \{1, .., 7\}$
+  - 定义全集 $U = \{1, ..., 7\}$
   - $A = \{1, 2, 3\} \Rightarrow \overline{A} = U - A = \{4, 5, 6, 7\}$
     <p style="text-align:center"><img src="./complement.png" alt="complement" style="zoom:20%;"/></p>
   - $\overline{\overline{A}} = A$
   - $\overline{\text{even integers}} = \text{odd integers}$
     <p style="text-align:center"><img src="./even-odd.png" alt="even-odd" style="zoom:20%;"/></p>
 
-#### 徳摩根律 (DeMorgan's Laws)
+#### 德摩根律 (DeMorgan's Laws)
 
 $$
 \overline{A\cup B} = \overline{A} \cap \overline{B}
@@ -159,7 +159,7 @@ $$
 - 若存在正整数 $c$ 与 $d$，使得 $\forall n\ge d, f(n) \le c\cdot g(n)$，记
   $$f(n) = O(g(n))$$
   - 称 $g(n)$ 是 $f(n)$ 的一个上界 (upper bound)。
-- 若存在正整数 $c$ 与 $d$，使得 $\forall n\ge d, c \dot f(n) \ge g(n)$，记
+- 若存在正整数 $c$ 与 $d$，使得 $\forall n\ge d, c \cdot f(n) \ge g(n)$，记
   $$f(n) = \Omega(g(n))$$
   - 称 $g(n)$ 是 $f(n)$ 的一个下界 (lower bound)。
 - 如果 $f(n) = O(g(n))$ 且 $f(n) = \Omega(g(n))$，记 $f(n) = \Theta(g(n))$。
@@ -262,7 +262,7 @@ $$
 
 #### 可达性 (reachable)
 
-给定有向图 $G = (V, E)$ 以及结点 $u, v$，称 $v$ 从 $u$ 可达，或者 $u$ -可达，如果存在从 $u$ 到 $v$ 的路径。
+给定有向图 $G = (V, E)$ 以及结点 $u, v$，称 $v$ 从 $u$ 可达，或者 $u$-可达，如果存在从 $u$ 到 $v$ 的路径。
 
 ### 1.1.6 树
 
@@ -270,7 +270,7 @@ $$
 
 <p style="text-align:center"><img src="./tree.png" alt="tree" style="zoom:20%;"/></p>
 
-入度为 0 的结点是根结点 (root)，出度为 0 的结点是树叶 (root)，边总是从父母 (parent) 结点指向孩子 (child) 结点。
+入度为 0 的结点是根结点 (root)，出度为 0 的结点是树叶 (leaf)，边总是从父母 (parent) 结点指向孩子 (child) 结点。
 
 <p style="text-align:center"><img src="./height.png" alt="height" style="zoom:20%;"/></p>
 
@@ -296,7 +296,7 @@ $$
 
 #### 鸽笼原理 (Pigeon Hole Principle)
 
-如果 $n + 1$ 个物品被放倒了 $n$ 个盒子里面，至少有一个盒子包含了至少 $2$ 个物品。
+如果 $n + 1$ 个物品被放到了 $n$ 个盒子里面，至少有一个盒子包含了至少 $2$ 个物品。
 
 可用反证法证明。
 
