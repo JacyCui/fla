@@ -36,7 +36,7 @@ PDA 是非确定性的，也就是说它的下一个移动可以有不止一个�
     - 一个状态 $q \in Q$；
     - 一个输入 $a \in \Sigma$ 或者 $a = \varepsilon$；
     - 一个栈符号 $Z \in \Gamma$；
-  - $\delta(q, a, Z) = \{(p, \alpha) \mid p \in Q, \alpha \in \Gamma^*\}$，可能是空集；
+  - $\delta(q, a, Z) \subseteq \{(p, \alpha) \mid p \in Q, \alpha \in \Gamma^*\}$，可能是空集；
   - 如果 $(p, \alpha) \in \delta(q, a, Z)$，那么 PDA 可以在状态 $q$，接收输入 $a$，并且观察到栈顶元素为 $Z$ 的时候：
     - 状态变为 $p$；
     - 从输入的首部接收一个字符 $a$，$a$ 可能是 $\varepsilon$；
