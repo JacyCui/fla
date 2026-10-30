@@ -417,7 +417,7 @@ $$
 
 :::definition 定义 2.8
 
-定义状态 $q$ 的 **状态闭包 (Closure of States)** 为从状态 $q$ 开始通过接受一个或者若干个 $\varepsilon$ 能够到达的状态集合，记为 $CL(q)$。
+定义状态 $q$ 的 **状态闭包 (Closure of States)** 为从状态 $q$ 开始通过接受零个或者若干个 $\varepsilon$ 能够到达的状态集合，记为 $CL(q)$。
 
 定义状态集合 $Q$ 的闭包为
 
