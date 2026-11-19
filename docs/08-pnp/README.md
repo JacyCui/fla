@@ -604,10 +604,10 @@ $$
 
 归约通常有两种方式：
 
-- 多对一的归约（many-one reduction）（通常做法）
-- 映射归约（mapping reduction）（有时候会用）
+- 映射归约（mapping reduction），也叫多对一归约（many-one reduction），记为 $\le_m$，是最常用的方式；
+- 图灵归约（Turing reduction），记为 $\le_T$，比映射归约更一般、也更弱。
 
-下面是从语言 $A$ 到语言 $B$ 的归约的图示：
+下面是从语言 $A$ 到语言 $B$ 的映射归约的图示：
 
 <p style="text-align:center"><img src="./reduction.png" alt="reduction" style="zoom:30%;"/></p>
 
@@ -629,6 +629,13 @@ $f$ 被称为从 $A$ 到 $B$ 的一个归约。
 :::
 
 这里的等价关系的含义是同真同假，即 $w \in A$ 映射到 $f(w) \in B$，$w \notin A$ 也要映射到 $f(w) \notin B$。
+
+> 还有一种更一般的归约，叫做**图灵归约**（Turing reduction），记为 $A \le_T B$：它允许在构造 $A$ 的判定机时，把 $B$ 的判定机（也称**预言机** oracle）当作一个可以**多次调用**的子程序来使用，并且可以根据每次调用的结果来决定后续的动作。相比之下，映射归约 $\le_m$ 只允许对输入做一次可计算的变换 $f$，然后就把 $f(w)$ 交给 $B$ 判定。因此：
+>
+> - 每个映射归约 $A \le_m B$ 都自动是图灵归约 $A \le_T B$（只需先计算一次 $f(w)$ 再调用 $B$ 即可），反之一般不成立；
+> - 图灵归约只能保证：若 $B$ 可判定，则 $A$ 可判定；而定理 8.9 表明映射归约还能保证：若 $B$ 是 RE，则 $A$ 也是 RE，图灵归约没有这个性质。
+>
+> 所以 $\le_T$ 是比 $\le_m$ **更弱**的归约关系。在证明不可判定性时，我们通常使用更强的 $\le_m$。
 
 :::theorem 定理 8.8
 如果 $A \le_{m} B$ 且 $B$ 是可判定的，那么 $A$ 也是可判定的。
@@ -660,25 +667,25 @@ $f$ 被称为从 $A$ 到 $B$ 的一个归约。
 - 证明我们可以用 $A_\mathrm{TM}$ 来判定 $\mathit{HALT}$；
 - 从而 $\mathit{HALT}$ 可判定，导出矛盾。
 
-其中，第二步用 $A_\mathrm{TM}$ 来判定 $\mathit{HALT}$ 的过程其实就是将 $\mathit{HALT}$ 归约到 $A_\mathrm{TM}$ 的过程。
+其中，第二步用 $A_\mathrm{TM}$ 来判定 $\mathit{HALT}$ 的过程其实就是将 $\mathit{HALT}$ 归约到 $A_\mathrm{TM}$ 的过程。下面我们用映射归约 $\le_m$ 给出这个归约。
 
-那么我们如何使用 $A_\mathrm{TM}$ 的判定机来判定 $\mathit{HALT}$ 呢？我们可以做的事情有：
+我们需要构造一个可计算函数 $f$，把 $\langle M, w\rangle$ 变换成 $\langle M', w\rangle$，使得
 
-- 检查是否 $\langle M, w \rangle \in A_\mathrm{TM}$；
-- 构造另一个图灵机 $M'$ 并且检查是否 $\langle M', w \rangle \in A_\mathrm{TM}$。
+$$
+\langle M, w\rangle \in \mathit{HALT} \Longleftrightarrow \langle M', w\rangle \in A_\mathrm{TM}
+$$
 
-归约（将 $\mathit{HALT}$ 归约成 $A_\mathrm{TM}$ ）过程如下：
+其中 $M'$ 按如下方式工作：$M'$ 在输入 $w$ 上模拟 $M(w)$，
 
-- 对于输入 $\langle M, w \rangle$，
-- 检查是否 $\langle M, w \rangle \in A_\mathrm{TM}$，
-  - 如果是，则说明 $M$ 在输入 $w$ 上停机，则接受；
-  - 如果否，则 $M$ 要么拒绝了 $w$，要么在 $w$ 上死循环了。
-- 通过交换 $M$ 中的接受状态和拒绝状态来构造 $M'$；
-- 检查是否 $\langle M', w \rangle \in A_\mathrm{TM}$，
-  - 如果是，则说明 $M'$ 接受了 $w$，于是 $M$ 拒绝了 $w$，则接受；
-  - 如果否，说明 $M$ 既没有接受 $w$，也没有拒绝 $w$，那么只能是死循环了，从而拒绝。
+- 如果 $M$ 在 $w$ 上**停机**（无论接受还是拒绝），$M'$ 就**接受**；
+- 如果 $M$ 在 $w$ 上**死循环**，$M'$ 也**死循环**。
 
-于是，我们完成了从 $\mathit{HALT}$ 到 $A_\mathrm{TM}$ 的归约，而 $\mathit{HALT}$ 问题是不可判定的，那么 $A_\mathrm{TM}$ 问题也就不可判定了。
+下面验证这个等价关系：
+
+- 若 $\langle M, w\rangle \in \mathit{HALT}$，即 $M$ 在 $w$ 上停机，则 $M'$ 接受 $w$，于是 $\langle M', w\rangle \in A_\mathrm{TM}$；
+- 若 $\langle M, w\rangle \notin \mathit{HALT}$，即 $M$ 在 $w$ 上死循环，则 $M'$ 也死循环、不接受 $w$，于是 $\langle M', w\rangle \notin A_\mathrm{TM}$。
+
+这样我们就得到了 $\mathit{HALT} \le_m A_\mathrm{TM}$。而 $\mathit{HALT}$ 不可判定，由定理 8.8 的逆否命题可知 $A_\mathrm{TM}$ 也不可判定。
 
 另一种证明方式：
 
@@ -702,34 +709,27 @@ $$
 E_\mathrm{TM} = \{\langle M \rangle \mid L(M) = \emptyset \}
 $$
 
-我们现在可以从哪些问题开始归约呢？
+我们从已经知道不可判定的 $A_\mathrm{TM}$ 出发，用映射归约 $\le_m$ 来证明 $E_\mathrm{TM}$ 不可判定。
 
-- $\mathit{HALT} = \{ \langle M, w \rangle \mid M \text{ halts on input } w \}$
-- $A_\mathrm{TM} = \{\langle M, w \rangle \mid M \text{ accepts input } w\}$
+我们需要构造一个可计算函数 $f$，把 $\langle M, w\rangle$ 变换成 $\langle M'\rangle$，使得
 
-一些我们可以做的事情：
+$$
+\langle M, w\rangle \in A_\mathrm{TM} \Longleftrightarrow \langle M'\rangle \notin E_\mathrm{TM}
+$$
 
-- 检查是否 $\langle M \rangle \in E_\mathrm{TM}$；
-- 构造另一个图灵机 $M'$ 并检查是否 $\langle M' \rangle \in E_\mathrm{TM}$。
-
-给定输入 $\langle M, w \rangle$，我们想要使用一个可以判定 $E_\mathrm{TM}$ 的过程来判定是否 $\langle M, w \rangle \in A_\mathrm{TM}$。
-
-想法：构造另一个图灵机 $M'$，这个图灵机除了可能的 $w$ 之外拒绝一切别的输入。这样，我们就可以利用 $M'$ 的语言是否为空来判断 $M$ 是否接受 $w$ 了。
+想法：让 $M'$ 的语言要么是 $\{w\}$（当 $M$ 接受 $w$ 时），要么是空集（当 $M$ 不接受 $w$ 时）。这样，$M'$ 的语言是否为空就恰好反映了 $M$ 是否接受 $w$。
 
 $M'$ 的构造方法：
 
 - 对于输入 $x$，如果 $x \ne w$，则直接拒绝；
-- 对于输入 $x$ 上模拟 $M$，在 $M$ 接受的时候接受。
+- 如果 $x = w$，则在 $x$ 上模拟 $M$，在 $M$ 接受的时候接受。
 
-下面我们来构造可以判断 $A_\mathrm{TM}$ 的图灵机：
+于是 $L(M')$ 至多只包含 $w$ 这一个串：若 $M$ 接受 $w$，则 $L(M') = \{w\}$；若 $M$ 不接受 $w$（拒绝或死循环），则 $L(M') = \emptyset$。下面验证这个等价关系：
 
-- 对于输入 $\langle M, w \rangle$：
-  - 根据 $M$ 的描述来构造 $M'$；
-  - 检查是否 $M' \in E_\mathrm{TM}$
-    - 如果否，$M$ 一定接受了 $w$，则接受；
-    - 如果是，$M$ 不可能接受 $w$，则拒绝。
+- 若 $\langle M, w\rangle \in A_\mathrm{TM}$，即 $M$ 接受 $w$，则 $L(M') = \{w\} \ne \emptyset$，于是 $\langle M'\rangle \notin E_\mathrm{TM}$；
+- 若 $\langle M, w\rangle \notin A_\mathrm{TM}$，即 $M$ 不接受 $w$，则 $L(M') = \emptyset$，于是 $\langle M'\rangle \in E_\mathrm{TM}$。
 
-于是，我们将 $A_\mathrm{TM}$ 问题归约到了 $E_\mathrm{TM}$ 问题，如果 $E_\mathrm{TM}$ 可判定，那么 $A_\mathrm{TM}$ 也就可判定了，这是矛盾的。因此 $E_\mathrm{TM}$ 不可判定。
+这样我们就得到了 $A_\mathrm{TM} \le_m \overline{E_\mathrm{TM}}$。而 $A_\mathrm{TM}$ 不可判定：如果 $E_\mathrm{TM}$ 可判定，那么它的补集 $\overline{E_\mathrm{TM}}$ 也可判定（可判定语言对补集封闭），再由定理 8.8 可知 $A_\mathrm{TM}$ 可判定，矛盾。因此 $E_\mathrm{TM}$ 不可判定。
 
 ### 8.3.4 Rice 定理
 
